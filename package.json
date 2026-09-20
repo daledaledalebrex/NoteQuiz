@@ -1,0 +1,17 @@
+{
+  "name": "notequiz",
+  "version": "1.0.0",
+  "description": "An offline study coach that quizzes you from your own notes, powered by the QVAC on-device AI SDK.",
+  "type": "module",
+  "bin": { "notequiz": "./src/cli.js" },
+  "scripts": {
+    "ingest": "QVAC_CONFIG_PATH=./qvac.config.json node src/cli.js ingest",
+    "quiz": "QVAC_CONFIG_PATH=./qvac.config.json node src/cli.js quiz"
+  },
+  "keywords": ["qvac", "on-device", "offline", "rag", "study", "local-ai"],
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@qvac/sdk": "^0.19.0"
+  }
+}
